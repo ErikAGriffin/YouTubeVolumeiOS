@@ -1,5 +1,5 @@
-# BackgroundAudio - a Cordova plugin
-by [Eddy Verbruggen](http://twitter.com/eddyverbruggen)
+# YouTubeVolumeiOS - a Cordova plugin
+by [Erik Griffin](http://erikgriffin.io)
 
 ## 0. Index
 
@@ -10,48 +10,28 @@ by [Eddy Verbruggen](http://twitter.com/eddyverbruggen)
 
 ## 1. Description
 
-Allows your app to keep on playing audio when it's in the background.
+Allows a javascript function call to set the volume of a YouTube video playing within its iFrame API in a UIWebView.
 
-* Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
 * For iOS only.
 
 ## 2. Installation
 
 ### Automatically (CLI / Plugman)
-Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman), compatible with [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how you fetch the latest release from npm with the Cordova CLI:
+Here's how you fetch the latest release from npm with the Cordova CLI:
 
 ```
-$ cordova plugin add nl.x-services.plugins.backgroundaudio
+$ cordova plugin add xxxx-tbd
 ```
 
 or, the latest from GitHub:
 ```
-$ cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-backgroundaudio
+$ cordova plugin add https://github.com/ErikAGriffin/cordova-plugin-youtubevolumeios
 ```
-
-### Manually
-
-1\. Add the following xml to your `config.xml` in the root directory of your `www` folder:
-```xml
-<feature name="BackgroundAudio">
-  <param name="ios-package" value="BackgroundAudio" />
-  <param name="onload" value="true" />
-</feature>
-```
-
-2\. Download the source files and copy them to your project.
-
-iOS: Copy the `.h` and `.m` files to `platforms/ios/<ProjectName>/Plugins`
-
-3\. Open your `<ProjectName>-Info.plist` and add a key `UIBackgroundModes` with an array value `audio`.
 
 ## 3. Usage
-Nothing to do here as the plugin will call the required native code on load automatically :)
 
-### 3.1 Another Use-Case
-When developing a app with media in it, the volume of the ringtone defines the volume of the media. So when the ringtone is muted, the sound of the media is muted. With this plugin installed, the volume of the media in the app is defined by the media volume of the phone.
+TBD
 
-Having only this Use-Case, your app may get rejected in the App Store, because you are not using the background feature. You have to remove the `audio` array in the `UIBackgroundModes` section manually in the `<ProjectName>-Info.plist` file
 
 ## 4. License
 

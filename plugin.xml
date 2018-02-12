@@ -3,36 +3,37 @@
         id="griffin.circle-software.youtubevolumeios"
         version="0.1.0">
 
-  <name>YouTubeVolumeiOS</name>
+    <name>YouTubeVolumeiOS</name>
 
-  <description>
-      Provides a basic interface to change the volume of the YouTube iFrame media playing in UIWebView.
-  </description>
+    <js-module name="YouTubeVolume" src="www/youtubevolumeios.js">
+        <clobbers target="YouTubeVolume" />
+    </js-module>
 
-  <license>MIT</license>
+    <author>Erik A. Griffin, Oslo Norway</author>
 
-  <engines>
-    <engine name="cordova" version=">=3.0.0"/>
-  </engines>
+    <description>
+        Provides a basic interface to change the volume of the YouTube iFrame media playing in UIWebView.
+    </description>
 
-  <!-- ios -->
-  <platform name="ios">
+    <license>MIT</license>
 
-    <!-- <config-file target="*-Info.plist" parent="UIBackgroundModes">
-      <array>
-        <string>audio</string>
-      </array>
-    </config-file> -->
+    <keywords>cordova,ios,youtube,audio,volume</keywords>
 
-    <config-file target="config.xml" parent="/*">
-      <feature name="YouTubeVolume">
-        <param name="ios-package" value="YouTubeVolume"/>
-        <param name="onload" value="true" />
-      </feature>
-    </config-file>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
 
-    <header-file src="src/ios/YouTubeVolume.h"/>
-    <source-file src="src/ios/YouTubeVolume.m"/>
-  </platform>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="YouTubeVolume">
+                <param name="ios-package" value="YouTubeVolume"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/YouTubeVolume.h"/>
+        <source-file src="src/ios/YouTubeVolume.m"/>
+    </platform>
 
 </plugin>
