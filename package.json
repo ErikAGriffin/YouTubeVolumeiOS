@@ -1,0 +1,25 @@
+{
+  "version": "1.0.1",
+  "name": "griffin.circle-software.youtubevolumeios",
+  "cordova_name": "BackgroundAudio",
+  "description": "Allows your app to keep on playing audio when it's in the background.",
+  "license": "MIT",
+  "author": "Erik Griffin <griffin.erik@gmail.com> (https://gitlab.com/ErikAGriffin)",
+  "cordova": {
+    "id": "griffin.circle-software.youtubevolumeios",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ErikAGriffin/YouTubeVolumeiOS.git"
+  },
+  "keywords": [
+    "cordova",
+    "ios",
+    "youtube",
+    "audio",
+    "volume"
+  ]
+}

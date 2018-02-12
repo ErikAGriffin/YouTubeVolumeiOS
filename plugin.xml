@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="griffin.circle-software.youtubevolumeios"
+        version="0.1.0">
+
+  <name>YouTubeVolumeiOS</name>
+
+  <description>
+      Provides a basic interface to change the volume of the YouTube iFrame media playing in UIWebView.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <!-- <config-file target="*-Info.plist" parent="UIBackgroundModes">
+      <array>
+        <string>audio</string>
+      </array>
+    </config-file> -->
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="YouTubeVolume">
+        <param name="ios-package" value="YouTubeVolume"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/YouTubeVolume.h"/>
+    <source-file src="src/ios/YouTubeVolume.m"/>
+  </platform>
+
+</plugin>
