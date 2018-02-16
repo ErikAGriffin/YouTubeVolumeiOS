@@ -5,7 +5,14 @@
 
 // this method is executed when the app loads because of the onload param in plugin.xml
 - (void)pluginInitialize {
+    // This hides the volume change popup.
+    // Later I will use this to control the volume as well.
+    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame: CGRectZero];
+    volumeView.showsRouteButton = NO;
+    [self.viewController.view addSubview: volumeView];
     NSLog(@"YouTubeVolume initialzed.");
+    // Also, it may be prudent to attach to the rootView instead:
+    // UIViewController *vc = [[[UIApplication sharedApplication] keyWindow] rootViewController];
 }
 
 - (void)setVolume:(CDVInvokedUrlCommand*)command
